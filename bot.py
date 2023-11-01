@@ -54,4 +54,4 @@ async def on_pm_s(client: Client, message: Message):
             disable_notification=True
         )
  
-pbot.start()
+pbot.run()
