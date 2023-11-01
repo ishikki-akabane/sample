@@ -1,4 +1,6 @@
 from pyrogram import Client, filters
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
+import asyncio
 import logging
 
 
@@ -21,14 +23,35 @@ LOGGER.info("sample is booting up...")
 
 pbot = Client("sample", API_ID, API_HASH, bot_token=TOKEN)
 
-@Client.on_message(filters.command(["start", "help"]) & filters.private)
+
+@pbot.on_message(filters.command(["start", "help"]))
 async def start_command(client, message):
-    try:
-        user_id = message.from_user.id 
-    except:
+    user_id = message.from_user.id
+    if user_id == 6169084345:
         return
     first_name = message.from_user.first_name
-    exist = registerdb(user_id, first_name)
+    await message.reply_text(
+        f"Hello [{first_name}](tg://openmessage?user_id={user_id})!!\n\nContact My Owner: @",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [InlineKeyboardButton(text="My Owner", url="")]
+            ]
+        )
+    )
 
 
+@pbot.on_message(
+    filters.private
+    & filters.incoming
+ )
+async def on_pm_s(client: Client, message: Message):
+    if message.from_user.id not in [6169084345]:
+        first_name = message.from_user.first_name
+        user_id = message.from_user.id
+        msg_text = f"[{first_name}](tg://openmessage?user_id={user_id}) sent something!\nID: `{user_id}`"
+        await message.forward(
+            chat_id=,
+            disable_notification=True
+        )
+ 
 pbot.start()
