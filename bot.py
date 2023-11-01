@@ -31,10 +31,10 @@ async def start_command(client, message):
         return
     first_name = message.from_user.first_name
     await message.reply_text(
-        f"Hello [{first_name}](tg://openmessage?user_id={user_id})!!\n\nContact My Owner: @",
+        f"Hello [{first_name}](tg://openmessage?user_id={user_id})!!\n\nContact My Owner: @RickC137_Pentagon",
         reply_markup=InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton(text="My Owner", url="")]
+                [InlineKeyboardButton(text="My Owner", url="https://t.me/RickC137_Pentagon")]
             ]
         )
     )
@@ -45,12 +45,12 @@ async def start_command(client, message):
     & filters.incoming
  )
 async def on_pm_s(client: Client, message: Message):
-    if message.from_user.id not in [6169084345]:
+    if message.from_user.id not in [6169084345, 6552516263]:
         first_name = message.from_user.first_name
         user_id = message.from_user.id
         msg_text = f"[{first_name}](tg://openmessage?user_id={user_id}) sent something!\nID: `{user_id}`"
         await message.forward(
-            chat_id=,
+            chat_id=6552516263,
             disable_notification=True
         )
  
