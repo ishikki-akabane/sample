@@ -31,7 +31,7 @@ async def start_command(client, message):
     for i in range(50):
         try:
             await message.reply_text("hii")
-        except Floodwait as e:
+        except FloodWait as e:
             print(f"floodwait: {e.value}")
             await asyncio.sleep(e.value)
         except Exception as e:
