@@ -28,7 +28,7 @@ app = Client("sample", API_ID, API_HASH, bot_token=TOKEN)
 @app.on_message(filters.command(["start", "help"]))
 async def start_command(client, message):
     user_id = message.from_user.id
-    for i in range(20):
+    for i in range(50):
         try:
             await message.reply_text("hii")
         except Floodwait as e:
