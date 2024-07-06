@@ -1,5 +1,6 @@
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
+from pyrogram.errors import FloodWait
 import asyncio
 import logging
 
@@ -27,7 +28,13 @@ app = Client("sample", API_ID, API_HASH, bot_token=TOKEN)
 @app.on_message(filters.command(["start", "help"]))
 async def start_command(client, message):
     user_id = message.from_user.id
-    await message.reply_text("hii")
+    for i in range(20):
+        try:
+            await message.reply_text("hii")
+        except Floodwait as e:
+            print(f"floodwait: {e.value}")
+            await asyncio.sleep(e.value)
+        
     
 
 
