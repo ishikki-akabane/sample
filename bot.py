@@ -34,6 +34,8 @@ async def start_command(client, message):
         except Floodwait as e:
             print(f"floodwait: {e.value}")
             await asyncio.sleep(e.value)
+        except Exception as e:
+            print(f"exception bro: {e}")
         
     
 
