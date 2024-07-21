@@ -1,0 +1,4 @@
+name: ishikki
+github: ishikki-akabane
+python: "3.10"
+run: ["python3", "bot.py"]
