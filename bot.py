@@ -5,7 +5,7 @@ import asyncio
 import logging
 
 
-TOKEN = "6386800486:AAHiHVHMDTLoTiFXLnEQwuiS3lGH-s2gTkU"
+TOKEN = "7248055214:AAEFfAsUxVqAjmqtrPdjdho2Lmvy3K7qF8Y"
 API_ID = 25629197  # Your API ID
 API_HASH = "fd41f8bacda97ab0a3ad120b30339978"  # Your API Hash
 
@@ -23,11 +23,10 @@ LOGGER.info("Test server is booting up...")
 
 app = Client("sample", API_ID, API_HASH, bot_token=TOKEN)
 
-
-@app.on_message(filters.command(["start", "help"]))
+@app.on_message(filters.command("start"))
 async def start_command(client, message):
-    user_id = message.from_user.id
-    
+    user_id = message.from_user.id    
     await message.reply_text("hii")
 
+print("started...")
 app.run()
