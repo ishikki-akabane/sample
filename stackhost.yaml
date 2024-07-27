@@ -1,4 +1,25 @@
-name: ishikki
-github: ishikki-akabane
-python: "3.10"
-run: ["python3", "bot.py"]
+user:
+  name: ishikki
+  github: ishikki-akabane
+
+python_version: "3.10"
+
+commands:
+  build:
+    - "pip install -r requirements.txt"
+    - "apt-get update && apt-get install -y ffmpeg"
+  start:
+    - "python3 bot.py"
+
+repository:
+  url: "https://github.com/your-username/your-repo.git"
+  branch: "main"
+
+env:
+  - "ENVIRONMENT=production"
+
+custom_commands:
+  pre_deploy:
+    - "echo Pre-deployment steps"
+  post_deploy:
+    - "echo Post-deployment steps"
