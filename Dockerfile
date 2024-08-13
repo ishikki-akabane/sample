@@ -1,12 +1,22 @@
 
 FROM python:3.10-slim
 
+RUN adduser --disabled-password --shell /bin/sh newuser
+
+WORKDIR /app
+
 RUN apt-get update && apt-get install -y \
     git \
     curl \
     nano \
     && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /app
+RUN git clone https://github.com/ishikki-akabane/sample
 
-CMD ["/bin/sh"]
+RUN pip install --no-cache-dir -r requirements.txt > /stackhostlogs/ishikki_install.log 2>&1
+
+RUN chown -R newuser:newuser /app
+        
+USER newuser
+
+CMD "python3 bot.py"
