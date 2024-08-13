@@ -8,7 +8,7 @@ commands:
   build:
     - "pip install -r requirements.txt"
   package:
-    - "libkrb5-dev nano"
+    - "krb5-user libkrb5-dev nano"
   start:
     - "python3 bot.py"
 
