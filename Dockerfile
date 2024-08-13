@@ -5,11 +5,7 @@ RUN adduser --disabled-password --shell /bin/sh newuser
 
 WORKDIR /app
 
-RUN apt-get update && apt-get install -y \
-    git \
-    curl \
-    nano \
-    && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y git curl nano krb5-user krb5-config
 
 RUN git clone https://github.com/ishikki-akabane/sample .
 
