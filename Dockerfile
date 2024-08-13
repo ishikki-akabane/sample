@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y \
 
 RUN git clone https://github.com/ishikki-akabane/sample
 
-RUN pip install --no-cache-dir -r requirements.txt > /stackhostlogs/ishikki_install.log 2>&1
+RUN pip install --no-cache-dir -r requirements.txt
 
 RUN chown -R newuser:newuser /app
         
