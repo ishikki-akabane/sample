@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y \
     nano \
     && rm -rf /var/lib/apt/lists/*
 
-RUN git clone https://github.com/ishikki-akabane/sample
+RUN git clone https://github.com/ishikki-akabane/sample .
 
 RUN pip install --no-cache-dir -r requirements.txt
 
