@@ -44,7 +44,7 @@ urllib3_secure_extra==0.1.0
 win_inet_pton==1.1.0
 #pykerberos
 wmi
-psycopg2
+#psycopg2 / alternative use psycopg2-binary
 gunicorn==22.0.0
 zstandard
 sqlalchemy
