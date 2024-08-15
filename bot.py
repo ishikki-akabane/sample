@@ -27,7 +27,7 @@ StartTime = time.time()
 app = Client("sample", API_ID, API_HASH, bot_token=TOKEN)
 
 
-@app.on_message(filte rs.command("start"))
+@app.on_message(filters.command("start"))
 async def start_command(client, message):
     user_id = message.from_user.id
     current_time = time.time()
