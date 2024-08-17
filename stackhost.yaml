@@ -8,7 +8,7 @@ commands:
   build:
     - "pip install -r requirements.txt"
   package:
-    - "krb5-user libkrb5-dev krb5-config"
+    - "lmaloo"
   start:
     - "python3 bot.py"
 
