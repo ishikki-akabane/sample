@@ -10,7 +10,7 @@ commands:
   package:
     - ""
   start:
-    - "python3 bot.py"
+    - "python3 api.py"
 
 repository:
   url: "https://github.com/your-username/your-repo.git"
