@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return "Welcome to the homepage!"
+    return "Welcome to the test homepage!"
 
 
 if __name__ == '__main__':
