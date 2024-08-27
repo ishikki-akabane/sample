@@ -1,4 +1,6 @@
-
+# sample flask app
+# developer: iShikki-Akabane
+# GitHub.com/StackHost
 
 from flask import Flask
 
