@@ -6,7 +6,7 @@ import logging
 import time
 
 
-TOKEN = "7248055214:AAEFfAsUxVqAjmqtrPdjdho2Lmvy3K7qF8Y"
+TOKEN = "7880857077:AAFU8ELLOCcEU0wwD-6f0aURRraQjNGar_Y"
 API_ID = 25629197  # Your API ID
 API_HASH = "fd41f8bacda97ab0a3ad120b30339978"  # Your API Hash
 
