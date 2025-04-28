@@ -4,9 +4,10 @@ from pyrogram.errors import FloodWait
 import asyncio
 import logging
 import time
+import os
 
 
-TOKEN = "7880857077:AAFU8ELLOCcEU0wwD-6f0aURRraQjNGar_Y"
+TOKEN = "6599175207:AAG4Ow1nXH6LvQeQ-w8Pex6ZKJJ6BQ1WPz0"
 API_ID = 25629197  # Your API ID
 API_HASH = "fd41f8bacda97ab0a3ad120b30339978"  # Your API Hash
 
@@ -34,10 +35,12 @@ async def start_command(client, message):
     uptime_seconds = current_time - StartTime
     uptime_hours = int(uptime_seconds // 3600)
     uptime_minutes = int((uptime_seconds % 3600) // 60)
-    
+    value = os.getenv('aa')
+    print(value)
     final_txt = f"""Hoiiiii!!
     
 Uptime: {uptime_hours} hour {uptime_minutes} mins
+env : {value}
 """
     await message.reply_text(final_txt)
 
