@@ -9,8 +9,7 @@ commands:
   build:
     - "pip install -r requirements.txt"
   package: ""
-  start:
-    - "python3 api.py"
+  start: "python3 api.py"
 
 repository:
   branch: "main"
