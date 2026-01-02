@@ -2,26 +2,16 @@ user:
   name: ishikki
   github: ishikki-akabane
 
-language: "python"
-python_version: "3.10"
+runtime:
+  image: "python:3.11-slim"
 
 commands:
   build:
     - "pip install -r requirements.txt"
-  package:
-    - ""
+  package: ""
   start:
-    - "python3 bot.py"
+    - "python3 api.py"
 
 repository:
-  url: "https://github.com/your-username/your-repo.git"
   branch: "main"
-
-env:
-  - "ENVIRONMENT=production"
-
-custom_commands:
-  pre_deploy:
-    - "echo Pre-deployment steps"
-  post_deploy:
-    - "echo Post-deployment steps"
+  auto_deploy: true
