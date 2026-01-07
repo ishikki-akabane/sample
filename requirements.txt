@@ -3,5 +3,4 @@ TgCrypto
 asyncio
 flask
 requests
-#gssapi==1.8.3
 #kerberos==1.3.1
