@@ -13,4 +13,4 @@ commands:
 
 repository:
   branch: "main"
-  auto_deploy: true
+  auto_deploy: false
