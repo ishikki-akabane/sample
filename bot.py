@@ -11,7 +11,10 @@ TOKEN = "6599175207:AAG4Ow1nXH6LvQeQ-w8Pex6ZKJJ6BQ1WPz0"
 API_ID = 25629197  # Your API ID
 API_HASH = "fd41f8bacda97ab0a3ad120b30339978"  # Your API Hash
 
-
+## aacha, what if i say i love someone
+## well i havent told her how i feel about her
+## why im writing here , i dont know, just wanna talk about her to myself
+## haha
 FORMAT = "[ishikki] %(message)s"
 logging.basicConfig(
     handlers=[logging.FileHandler("logs.txt"), logging.StreamHandler()],
