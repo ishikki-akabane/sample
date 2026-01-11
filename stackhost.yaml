@@ -3,14 +3,15 @@ user:
   github: ishikki-akabane
 
 runtime:
-  image: "node:22"
+  image: "python:3.11-slim" # "node:22"
 
 commands:
   build:
-    - "pnpm install"
-    - "pnpm run build"
+    # - "pnpm install"
+    # - "pnpm run build"
+    - "pip install -r requirements.txt"
   package: ""
-  start: "pnpm run start"
+  start: "python api.py"
 
 repository:
   branch: "main"
