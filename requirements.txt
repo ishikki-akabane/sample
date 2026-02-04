@@ -1,5 +1,5 @@
-pyrogram
-TgCrypto
-asyncio
+#pyrogram
+#TgCrypto
+#asyncio
 flask
 requests
